@@ -1,0 +1,19 @@
+# a program to grade student results
+
+marks=int(input('ENTER YOUR MARKS'))
+if marks<0:
+    print('invalid mark')
+elif marks>75:
+    print('dist')
+elif marks>=65:
+    print(6)
+elif marks>=60:
+    print(5)
+elif marks>=50:
+    print(4)
+elif marks>=40:
+    print(3)
+else:
+    print('failed dismally')
+    
+print('done we here!')
