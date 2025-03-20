@@ -1,0 +1,87 @@
+<!DOCTYPE html> 
+
+<html> 
+    <head> 
+            <title>Alvin Web Page Practical2</title> 
+            <link rel="stylesheet" href="index.css">
+    </head> 
+    <body> 
+        <h1 class="BSC">How can we help you ?</h1> 
+                <p id="unique"> We Welcoming you on our page. Choose how we can help by clicking on one of the following options</p> 
+        <h2 class="BSC">IT</h2> 
+        <h3 class="BSC">Qualifiquations</h3> 
+        <h4 class="BSC">BSC IT</h4> 
+
+        <img src="thandi.jpg" alt="Thandi image">
+        <h5 class="BSC">First semester modules</h5> 
+            <ul> 
+                <li>Web Technologie 511</li> 
+
+                <li>Networks 511</li> 
+
+                <li>Mathematics 511</li> 
+
+                <li>Programing 511</li> 
+
+                <li>Information Systems 511</li> 
+            </ul> 
+        <h5 class="BSC">Second semester modules</h5> 
+            <ol>
+                <li>Web Technologie 512</li> 
+
+                <li>Networks 512</li> 
+
+                <li>Mathematics 512</li> 
+            </ol>
+        <h3 class="BSC">Apply to study at Richfield</h3>
+            <form>
+            <label>Full name: <input type="text"></label><br></br>
+
+            <label>Email: <input type="email"></label><br></br>
+
+            <label>Phone number: <input type="numbers"></label><br></br>
+
+            <label>Password: <input type="password"></label><br></br>
+
+            <label>Confirm password: <input type="password"></label><br></br>
+
+            <br>
+            <label>Select Qualification:
+            <select name="qualification"><br></br>
+            <option value="bscit">BSCIT</option>
+            <option value="hcit">HCIT</option>
+            <option value="dit">DIT</option>
+            </select>
+            </label>
+            <br></br>
+            <button>Submit</button>
+            <button>Clear</button>                                        
+            </form>
+        <h3>BSCIT timetable</h3>
+            <table border="1">
+            <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            </tr>
+            <tr>
+            <td> 8:30</td>
+            <td>Networks</td>
+            <td>Programing</td>
+            <td>Web Technologie</td>
+            <td>Mathematics</td>
+            </tr>
+            <tr>
+                <td>mathematics</td>
+                <td>Networks</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            </table>
+    </body>
+</html>
