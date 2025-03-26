@@ -1,0 +1,14 @@
+def convert_mileage(mpg):
+
+    miles_to_kilometers = 1.60934  
+    gallons_to_liters = 3.78541    
+
+
+    l_per_100km = (100 * gallons_to_liters) / (mpg * miles_to_kilometers)
+    
+    return l_per_100km
+
+
+mpg = float(input("Enter fuel efficiency in miles per gallon (MPG): "))
+l_per_100km = convert_mileage(mpg)
+print(f"{mpg} miles per gallon is equivalent to {l_per_100km:.2f} liters per 100 kilometers.")
