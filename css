@@ -1,0 +1,30 @@
+.Web{
+    background-color: rgb(141, 141, 216);
+}
+.INS{
+    background-color: rgb(221, 221, 182);
+}
+.Prog{
+    background-color: rgb(121, 114, 128);
+}
+.Net{
+    background-color: rgb(230, 162, 162);
+}
+.Math{
+    background-color: rgb(243, 236, 236);
+}
+body{text-align: center;
+    
+}
+table{width: 100%;}
+nav ul{list-style-type:none ;
+    display:flex; }
+    Nav {background-color: rgb(109, 104, 104);
+    color: white;
+       padding: 15px 0; 
+    }
+nav ul li a{text-decoration: none;
+color: antiquewhite;
+font-size: 18px;
+
+}
