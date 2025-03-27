@@ -1,0 +1,118 @@
+HTML PARt
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    
+        <img src="https://th.bing.com/th/id/OIP.F9qO3ApUBVB7lmhMM-dzlgAAAA?w=203&h=151&c=7&r=0&o=5&pid=1.7.png" width="400" >
+       
+       
+       <table border="1" style="font-weight:bold" cellspacing="0">
+       <b>
+       <caption > FACULTY OF INFORMATION TECHNOLOGY <br>BSCIT 1ST Year TIMETABLE: 2025</caption>
+       <tr>
+       <td></td>
+       
+       <td> 8:30-9:30</td>
+       <td>9:30-10:30</td>
+       <td>10:30-11:30</td>
+       <td>11:30-12:30</td>
+       <td>12:30<br>13:30</td>
+       <td>13:30-14:30</td>
+       <td>14:30-15:30</td>
+       <td>15:30-16:30</td>
+       
+       </tr>
+       <tr>
+       <td> Mon </td>
+       <td class="Net"> Networks 511    Venue:<br>Audtorium       Adrew</td>
+       <td class="Prog">Programing 511    Venue:<br>Audtorium       Moreblessing</td>
+       <td class="Web">WebTech 511A Theory<br>Venue:Audtorium<br>Jemima </td>
+       <td></td>
+       <td>L</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       </tr>
+       <tr>
+       <td>TUES</td>
+       <td> </td>
+       <td></td>
+       <td></td>
+       <td class="Net"> Networks 511    Venue:<br>Audtorium       Adrew</td>
+       <td>U</td>
+       <td class="INS">INS 511A Prac<br> Venue :Lab 3<br>Ebenezer</td>
+       <td class="INS" >INS 511A Prac<br> Venue :Lab 3<br>Ebenezer</td>
+       <td></td>
+       </tr>
+       <tr>
+       <td>WED</td>
+       <td> </td>
+       <td class="Math"> Math 511    Venue:<br>Lab 3       Moreblessing</td>
+       <td class="Math">Math 511    Venue:<br>Lab 3       Moreblessing </td>
+       <td class="Web">WebTech 511A Theory<br>Venue:Audtorium<br>Jemima</td>
+       <td>N</td>
+       <td class="Prog">Prog 511A Prac<br>Venue:Lab 3<br>More blessing</td>
+       <td class="Prog">Prog 511A Prac<br>Venue:Lab 3<br>More Blessing</td>
+       <td></td>
+       </tr>
+       <td>Thur</td>
+       <td class="Net"> Networks 511A<br>Venue:Audtorium Andrew</td>
+       <td class="INS">INS511A Theory Venue:<br>Audtorium       Ebenezer</td>
+       <td></td>
+       <td class="Math"> Math 511    Venue:<br>Lab 3       Moreblessing</td>
+       <td>C</td>
+       <td class="Web">WebTech  511A Prac Vanue:<br>Lab 3<br> Jemima</td>
+       <td class="Web">WebTech  511A Prac Venue:<br>Lab 3<br> Jemima</td>
+       <td></td>
+       </tr>
+       <tr>
+       <td>FRI</td>
+       <td class="Prog">Prog 511A Prac<br>Venue: Auditorium<br>More blessing</td>
+       <td class="Net"> Networks 511A<br>Venue:Audtorium Andrew</td>
+       <td class="Math">Math 511    Venue:<br>Lab 3       Moreblessing</td>
+       <td class="INS">INS 511A Prac<br> Venue : Auditorium <br>Ebenezer</td>
+       <td>H</td>
+       <td></td>
+       <td></td>
+       <td></td>
+       </tr>
+       
+       
+       </b>
+       </table>
+       
+    
+</body>
+</html>
+
+
+CSS PART
+
+.Web{
+    background-color: rgb(141, 141, 216);
+}
+.INS{
+    background-color: rgb(221, 221, 182);
+}
+.Prog{
+    background-color: rgb(121, 114, 128);
+}
+.Net{
+    background-color: rgb(230, 162, 162);
+}
+.Math{
+    background-color: rgb(243, 236, 236);
+}
+body{text-align: center;
+    
+}
+table{width: 100%;}
+
+
+
+
+
