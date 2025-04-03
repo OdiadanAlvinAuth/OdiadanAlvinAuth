@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+    <link rel="stylesheet" href="index.CSs">
+</head>
+<body>
+    <h1>Student Info Portal</h1>
+    <nav>
+        <ul>
+            <li><a>Home</a></li>
+
+            <li><a>About</a></li>
+
+            <li><a>Contact</a></li>
+        </ul>
+    </nav>
+    <h3>Welcome to Our Portal</h3>
+    <h3>Student Information Table</h3>
+    <table border="">
+    
+        <tr>
+            <td>Name</td>
+            <td>Age</td>
+            <td>Course</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>21</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>Sarah</td>
+            <td>22</td>
+            <td>Data Science</td>
+        </tr>
+    </table>
+
+    <h3>Add a New Student</h3>
+    <form>
+        <label>Name: <input type="Text"></label> <br>
+        <label>Age: <input type="Number"></label><br>
+        <label>Course: <input type="Text"</label>
+    </form>
+     <br>
+
+
+
+     <br>
+    <button>Submit</button>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+ Css
+body{text-align: left;
+    
+}
+table{width: 100%;}
+nav h1 ul{list-style-type: none;
+     }
+   Nav {background-color: rgb(12, 12, 12);
+    color: rgb(255, 253, 253);
+       padding: 15px 0; 
+    }
+nav ul li a{text-decoration: none;
+color: rgb(250, 250, 250);
+font-size: 18px;
+
+}
+
