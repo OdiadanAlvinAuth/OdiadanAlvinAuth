@@ -1,0 +1,94 @@
+# nested elifs example
+traffic_lights = "green, yellow, red"
+# a string with one color
+light = "purple"  # variable for color name
+if light in traffic_lights:
+    if light == "green":
+        print("You can go!")
+    elif light == "yellow":
+        print("Get ready!")
+    else:
+        # if the lights are red
+        print("Just wait.")
+else:
+    print("No such traffic light color, do whatever you want")
+
+
+
+
+price = 6000
+if price > 5000:
+    print("That's too expensive!")
+if price > 500:
+    print("I can afford that!")
+else:
+    print("That's too cheap!")
+# The output is 'That's too expensive!\nI can afford that!'
+
+
+# elif example
+price = 10000 # there should be some int value
+if price > 5000:
+    print("That's too expensive!")
+elif price > 500:
+    print("I can afford that!")
+else:
+    print("That's too cheap!")
+
+
+
+age = input("How old are you? ")
+if age > 18:
+    print("You're adult")
+else:
+    print("You're minor")
+
+
+
+                  if statement
+rainbow = "red, orange, yellow, green, blue, indigo, violet"
+warm_colors = "red, yellow, orange"
+my_color = "orange"
+
+if my_color in rainbow:
+    print("Wow, your color is in the rainbow!")
+    if my_color in warm_colors:
+        print("Oh, by the way, it's a warm color.")
+
+
+if biscuits >= 5:
+    print("It's time for tea!")
+    print("What tea do you prefer?")
+print("What about some chocolate?")
+
+
+
+boolean type and operartion
+
+is_open = True
+is_closed = False
+
+print(is_open)    # True
+print(is_closed)  # False
+
+
+a = True and True    # True
+b = True and False   # False
+c = False and False  # False
+d = False and True   # False
+Explain code
+
+# `and` has a higher priority than `or`
+truthy_integer = False or 5 and 100  # 100
+
+
+
+
+
+
+
+
+
+
+
+
