@@ -1,0 +1,59 @@
+import math
+
+def ln_approximation(x, precision, max_terms):
+    # Initializing the series terms and values
+    term = x  # First term of the series
+    total = term  # Running total of the approximation
+    n = 1  # Term counter
+    prev_total = 0  # To track the previous total for difference calculation
+    
+    # Print the first term and the running total
+    print(f"Term 1: {term}, Running Total: {total}, Difference: {abs(total - prev_total)}")
+    
+    # Loop to calculate terms of the series
+    while n < max_terms:
+        n += 1
+        # Calculate the next term in the series: (-1)^(n+1) * (x^n) / n
+        term = ((-1)**(n + 1)) * (x**n) / n
+        prev_total = total  # Store the previous total for difference calculation
+        total += term  # Add the new term to the running total
+        
+        # Print the current term, running total, and the difference
+        print(f"Term {n}: {term}, Running Total: {total}, Difference: {abs(total - prev_total)}")
+        
+        # Check if the difference between the current and previous total is less than the precision
+        if abs(total - prev_total) < precision:
+            break
+
+    return total, n
+
+# Main program
+def main():
+    while True:
+        # Ask the user for input of x (where -1 < x < 1)
+        x = float(input("Enter a value for x (where -1 < x < 1): "))
+        if -1 < x < 1:
+            break
+        else:
+            print("Invalid input. Please enter a value for x such that -1 < x < 1.")
+    
+    # Ask the user to specify the precision or maximum number of terms
+    precision = float(input("Enter the precision (e.g., 0.000001): "))
+    max_terms = int(input("Enter the maximum number of terms: "))
+    
+    # Calculate the approximation of ln(1 + x) using the series
+    approximation, num_terms = ln_approximation(x, precision, max_terms)
+    
+    # Calculate the exact value using math.log
+    exact_value = math.log(1 + x)
+    
+    # Display the summary
+    print("\nSummary:")
+    print(f"Final Approximation: {approximation}")
+    print(f"Exact Value (ln(1 + x)): {exact_value}")
+    print(f"Number of Terms Used: {num_terms}")
+    print(f"Difference between approximation and exact value: {abs(approximation - exact_value)}")
+
+if __name__ == "__main__":
+    main()
+
