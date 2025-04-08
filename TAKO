@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSmart Water Bottle</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="Script.js"></script>
+</head>
+<body>
+  
+  <header class="header">
+    
+    <nav class="navbar">
+      <div class="logo">EcoSmart</div>
+      <center>
+      <ul class="nav-links" >
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+      </center>
+    </nav>
+    
+  </header>
+
+
+  
+  <section id="home" class="main-section">
+    <div class="product-info">
+      <h1>EcoSmart Water Bottle</h1>
+      <center>
+      <p>Stay hydrated with the latest in smart hydration technology!</p><br>
+      <img src="https://via.placeholder.com/300x300" alt="EcoSmart Water Bottle"><br>
+      <button id="buyNowBtn" class="buy-btn">Buy Now</button>
+    </center>
+    </div>
+
+    
+    <div id="colorModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Select Your Color</h2>
+        <form id="colorForm">
+          <label>
+            <input type="radio" name="color" value="Blue"> Blue
+          </label>
+          <label>
+            <input type="radio" name="color" value="Green"> Green
+          </label>
+          <label>
+            <input type="radio" name="color" value="Black"> Black
+          </label>
+          <button type="submit" class="btn">Select</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="pricing" class="pricing-section">
+    <h2>Pricing</h2>
+    <p>Choose features to customize your EcoSmart Water Bottle</p>
+    <div class="pricing-options">
+      <label>
+        <input type="checkbox" id="engraving"> Custom Engraving ($5)
+      </label>
+      <label>
+        <input type="checkbox" id="premiumPackaging"> Premium Packaging ($10)
+      </label>
+    </div>
+    <p>Total Price: <span id="totalPrice">$30</span></p>
+  </section>
+
+  <center>
+  <footer id="contact" class="footer">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <textarea id="message" placeholder="Message" required></textarea>
+      
+        
+        <input type="checkbox" id="terms" required>
+        <label for="terms">I agree to the <a href="#">Terms and Conditions</a></label>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </footer>
+</center>
+</body>
+</html>
