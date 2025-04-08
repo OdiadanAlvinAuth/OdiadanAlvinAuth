@@ -1,0 +1,9 @@
+# task No 1 
+totalfruits=0
+days=0
+while days < 8:
+   fruits = int(input('please enter the number of fruits you take on a day'))
+   totalfruits+=fruits
+   days+=1
+   print('you consumed', totalfruits, 'this week')
+   
