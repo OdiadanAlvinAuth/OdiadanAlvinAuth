@@ -1,0 +1,145 @@
+          HTML Part
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+    <link rel="stylesheet" href="index.CSs">
+</head>
+<body>
+    <h1>Student Info Portal</h1>
+    <center>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </center>
+    <h1>Welcome !</h1>
+    
+    <section>
+    <p class="BSC">This is a simple paragraph</p>
+    <p class="DIT">Money rule the world but you can't pay god with it</p>
+    </section>
+
+    <p class="box">Hover over me</p>
+
+  
+
+
+
+</body>
+</html>
+              CSS Part
+table{width: 100%;}
+nav h1 ul{list-style-type: none;
+     }
+   Nav {background-color: rgb(12, 12, 12);
+    color: rgb(184, 57, 57);
+       padding: 15px 0; 
+    }
+nav ul li a{text-decoration: none;
+color: rgb(250, 250, 250);
+font-size: 18px;
+
+}
+    
+
+   Nav {background-color: rgb(25, 62, 117);
+    color: rgb(255, 253, 253);
+       padding: 15px 0; 
+    }
+nav ul li a{text-decoration: none;
+
+color: rgb(250, 250, 250);
+font-size: 18px;
+
+}
+nav ul li {
+   display: inline-block;
+}
+.dit:hover{
+   background-color: rgb(163, 106, 50);
+   border-radius: 15px;
+}
+p{
+   padding: 15px;
+   margin: 10px;
+   background-color: coral;
+   border: 1px solid #ccc;
+   border-radius: 15px;
+}
+
+.box:hover{
+   border-radius: 8px;
+   background-color: rgb(129, 129, 241);
+
+
+}
+.box:hover{
+   border-radius: 8px;
+   background-color: rgb(135, 223, 34);
+   transition: ease-in;
+
+
+}
+.box{
+   background-color: rgb(134, 189, 170);
+   height: 100px;
+   font-size: xx-large;
+   width: 300px;
+   padding-top: 40px;
+   border-radius: 5px;
+   text-align: center;
+}
+.........
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical</title>
+    <link rel="stylesheet" href="index.CSs">
+    <script>
+        alert("Welcome to your WebTech interactive");
+
+        var name= prompt("What is your name");
+        let surname= prompt("Enter your surname");
+        alert (name);
+        console.log(surname);
+        document.write("WELCOME : " + name + surname);
+    </script>
+</head>
+<body>
+    <h1>Student Info Portal</h1>
+    <center>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+
+            <li><a href="#">About</a></li>
+
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    </center>
+    <h1>Welcome !</h1>
+    
+    <section>
+    <p class="BSC">This is a simple paragraph</p>
+    <p class="DIT">Money rule the world but you can't pay god with it</p>
+    </section>
+
+    <p class="box">Hover over me</p>
+
+  
+
+
+
+</body>
+</html>
