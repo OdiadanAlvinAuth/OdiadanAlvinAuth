@@ -1,0 +1,23 @@
+#When we fucking i record it,  While i'm getitting headed by your bitch she' like Nigga i like how you taste 
+
+numberofyears = int(input("Enter the period in years:"))
+months=['January', 'February','March', 'April','May', 'June','July', 'August', 'Sep','oct','Nov', 'Dec']
+
+total=0
+rainfall=0
+average=0
+
+for yrs in range (numberofyears):
+    print('Year', yrs, "readings")
+    
+    for month in months:
+        print('Enter rainfall amount for the month of ', month)
+        rainfall=input(int(input('Enter the rainfall amount: ')))
+        
+total+=rainfall
+   
+average = total / (12 * numberofyears)
+print("number of months:", months.len*numberofyears)
+print("average: ", average)
+print("total: ", total)
+        
