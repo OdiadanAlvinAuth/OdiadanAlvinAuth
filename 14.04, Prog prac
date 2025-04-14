@@ -1,0 +1,45 @@
+def calculate_shipping_charges(num_items):
+    
+    FIRST_ITEM = 2.99
+    ITEMS_2_TO_5 = 1.99
+    ITEMS_6_TO_14 = 1.49
+    ITEMS_15_AND_ABOVE = 0.99
+    
+    if num_items <= 0:
+        return 0.00
+    
+    if num_items == 1:
+        return FIRST_ITEM
+    elif 2 <= num_items <= 5:
+        return FIRST_ITEM + (ITEMS_2_TO_5 * (num_items - 1))
+    elif 6 <= num_items <= 14:
+        return FIRST_ITEM + (ITEMS_2_TO_5 * 4) + (ITEMS_6_TO_14 * (num_items - 5))
+    else:  # 15 or more items
+        return (FIRST_ITEM + 
+                (ITEMS_2_TO_5 * 4) + 
+                (ITEMS_6_TO_14 * 9) + 
+                (ITEMS_15_AND_ABOVE * (num_items - 14)))
+
+def main():
+    print("Shipping Charge Calculator")
+    print("--------------------------")
+    
+    try:
+        
+        num_items = int(input("Enter the number of items purchased: "))
+        
+        if num_items < 0:
+            print("Please enter a positive number of items.")
+            return
+        
+        
+        shipping_charge = calculate_shipping_charges(num_items)
+        
+        
+        print(f"\nShipping charges for {num_items} items: ${shipping_charge:.2f}")
+    
+    except ValueError:
+        print("Invalid input. Please enter a whole number.")
+
+if __name__ == "__main__":
+    main()
