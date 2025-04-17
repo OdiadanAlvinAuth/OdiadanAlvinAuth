@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <img src="https://www.stugon.com/wp-content/uploads/2013/12/Exotic-Car-Wallpapers-HD-Edition-stugon.com-10.jpg" alt="Jemina">
+
+    <h1 class="box">Lecturer Profile</1>
+
+        
+
+<h3 class="BSC">Name: Jemina</h3>
+<h3 class="BSC">Surname : </h3>
+
+<h2>Qualifications</h2>
+<ol>
+    <li>Bsc in IT</li>
+    <li>PHD in IT</li>
+    <li>Master in It</li>
+</ol>
+<h2 class="DIT">Description</h2>
+
+
+<p class="BSS">Dr. Jemina is a dedicated and dynamic lecturer known for her engaging teaching style and deep expertise in her field. With over a decade of academic and professional experience, she brings both theoretical knowledge and practical insights into the classroom. Passionate about education, Dr. Jemina strives to create an inclusive and stimulating learning environment that encourages critical thinking and active participation.
+
+She is highly regarded by students for her approachable demeanor, clear explanations, and ability to make complex topics accessible and interesting. Outside of teaching, Dr. Jemina is actively involved in research and regularly contributes to academic journals and conferences. Her commitment to student success and lifelong learning makes her a valued member of the academic community.
+</p>
+<script>
+let module = prompt("Please enter module name");
+if (module == 'Webtech') {
+
+alert ('You are a first year student ');}
+document.write("Welcome to Web technology");
+
+else if (module == 'Programming 621') {
+            alert ('You are a second year student')
+        
+
+    }
+    else if (module == 'Programming 731') 
+    {
+        alert ('You are a third Year Student')
+    }  
+</script>
+</body>
+</html>
+            Css part
+ol li a{text-decoration: none;
+    color: rgb(250, 250, 250);
+    font-size: 18px;
+    
+    }
+    h1 {background-color: rgb(25, 62, 117);
+        color: rgb(255, 253, 253);
+           padding: 15px 0; }
+           .p{
+            padding: 15px;
+            margin: 10px;
+            background-color: coral;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+         }
+    h3 {
+        background-color: antiquewhite;
+        border: 1px solid #ccc;
+        margin: 10px;
+        border-radius: 15px;
+    }
+         .box{
+            background-color: rgb(134, 189, 170);
+            height: 100px;
+            font-size: xx-large;
+            width: 300px;
+            padding-top: 40px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+        ol {background-color: rgb(25, 62, 117);
+            color: rgb(255, 253, 253);
+               padding: 15px 0; }
+               table{width: 100%;}
+               nav h1 ul{list-style-type: none;
+                    }
+                  Nav {background-color: rgb(12, 12, 12);
+                   color: rgb(184, 57, 57);
+                      padding: 15px 0; 
+                   }
+               nav ul li a{text-decoration: none;
+               color: rgb(250, 250, 250);
+               font-size: 18px;
+               
+               }
+                   
+               
+                  ol {background-color: rgb(25, 62, 117);
+                   color: rgb(255, 253, 253);
+                      padding: 15px 0; 
+                   }
+               ol li a{text-decoration: none;
+               
+               color: rgb(250, 250, 250);
+               font-size: 18px;
+               
+               }
+               ol li {
+                  display: inline-block;
+               }
+               .dit:hover{
+                  background-color: rgb(163, 106, 50);
+                  border-radius: 15px;
+               }
+               p{
+                  padding: 15px;
+                  margin: 10px;
+                  background-color: coral;
+                  border: 1px solid #ccc;
+                  border-radius: 15px;
+               }
+               
+               .box:hover{
+                  border-radius: 8px;
+                  background-color: rgb(129, 129, 241);
+               
+               
+               }
+               .box:hover{
+                  border-radius: 8px;
+                  background-color: rgb(135, 223, 34);
+                  transition: ease-in;
+               
+               
+               }
+               .box{
+                  background-color: rgb(134, 189, 170);
+                  height: 100px;
+                  font-size: xx-large;
+                  width: 300px;
+                  padding-top: 40px;
+                  border-radius: 5px;
+                  text-align: center;
+               }
+               img{
+                width: 300px;
+               }
