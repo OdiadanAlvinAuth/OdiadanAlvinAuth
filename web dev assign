@@ -1,0 +1,140 @@
+            HTML Part
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSmart Water bottle</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <center>
+  <header class="header">
+    <nav class="navbar">
+      <ul class="LUV">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="PUT">
+    <div class="product-info">
+      <h1>EcoSmart Water Bottle</h1>
+      <p class="DNA">Stay hydrated with the latest in smart hydration technology</p>
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/039/586/224/small_2x/ai-generated-a-collection-of-colorful-bottles-on-a-clean-table-generated-by-ai-photo.jpg" alt="EcoSmart Water Bottle">
+      <br>
+      <br>
+      <button id="buyNowBtn" class="ALVIN">Buy Now</button>
+    </div>
+
+    
+    <div id="colorModal" >
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Select Your Color</h2>
+        <form id="colorForm">
+          <label>
+            <input type="radio" name="color" value="Blue"> Blue
+          </label>
+          <label>
+            <input type="radio" name="color" value="Green"> Green
+          </label>
+          <label>
+            <input type="radio" name="color" value="Black"> Black
+          </label>
+          <br>
+          <br>
+          <button type="submit" class="btn">Select</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="pricing" class="BSC">
+    <h2>Pricing</h2>
+    <p>Choose features to customize your EcoSmart Water Bottle</p>
+    <div class="pricing-options">
+      <label>
+        <input type="checkbox" id="engraving"> Custom Engraving (R45)
+      </label>
+      <br>
+      <br>
+      <label>
+        <input type="checkbox" id="premiumPackaging"> Premium Packaging (R60)
+      </label>
+    </div>
+    <p>Total Price: <span id="totalPrice">R105</span></p>
+  </section>
+
+
+  <footer id="contact" class="DIT">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <br>
+      <input type="email" id="email" placeholder="Email" required>
+      <br>
+      <textarea id="message" placeholder="Message" required></textarea>
+      <br>
+
+      <label>
+        <input type="checkbox" id="terms" required> I agree to the <a href="#">Terms and Conditions</a>.
+      </label>
+      <br>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </footer>
+  </center>
+</body>
+</html>
+                  CSS Part
+.header{
+  border: 2px solid #a89e61;
+  border-radius: 8cap;
+  background-color: rgb(245, 216, 180);
+  width: 600px;
+  height: 40px;
+  margin: 4px;
+
+}
+img 
+{
+  width: 300px;
+  border-radius: 4cap;
+}
+.DIT{
+  background-color: rgb(250, 218, 178);
+  border-radius: 4cap;
+  border: 2px solid #a89e61;
+  margin: 4px;
+}
+
+.BSC {
+  background-color: rgb(255, 227, 185);
+  border: 2px solid #a89e61;
+  border-radius: 4cap;
+  margin: 4px;
+}
+
+.PUT{
+  background-color: bisque;
+  border-radius: 4cap;
+  border:2px solid #a89e61;
+  margin: 4px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  margin-right: 10px;}
