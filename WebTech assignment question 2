@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2025 Election Results</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #110c0c;
+    }
+
+    canvas {
+      max-width: 500px;
+      max-height: 500px;
+    }
+</style>
+</head>
+<body>
+
+  <h1>2025 Election Results</h1>
+  <canvas id="electionChart"></canvas>
+
+<script>
+const ctx = document.getElementById('electionChart').getContext('2d');
+
+const data = {
+labels: ['DAD (45%)', 'PPP (5%)', 'CCCC (27%)', 'MCD (23%)'],
+datasets: [{
+label: 'Election Results',
+data: [45, 5, 27, 23],
+backgroundColor: [
+'Blue', 
+'Red', 
+'yellow', 
+'purple'  
+        ],
+borderColor: '#ffffff',
+borderWidth: 2
+      }]
+    };
+
+const config = {
+type: 'pie',
+data: data,
+options: {
+responsive: true,
+plugins: {
+legend: {
+position: 'bottom',
+},
+tooltip: {
+callbacks: {
+label: function(context) {
+let label = context.label || '';
+let value = context.parsed || 0;
+return `${label}: ${value}%`;
+              }
+            }
+          }
+        }
+      }
+    };
+new Chart(ctx, config);
+</script>
+
+</body>
+</html>
