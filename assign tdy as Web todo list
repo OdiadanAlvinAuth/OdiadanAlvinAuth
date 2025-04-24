@@ -1,0 +1,162 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dynamic To-Do List</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    ul { list-style-type: none; padding: 0; }
+    li { 
+      margin: 8px 0; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+
+    .todo-text {
+      flex-grow: 1; 
+      margin-left: 10px;
+    }
+
+    .completed {
+      text-decoration: line-through;
+      color: gray;
+    }
+
+    button {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    .filters button {
+      margin-right: 5px;
+      width: 120px;
+    }
+
+    i {
+      pointer-events: none; /* Ensures click targets the button, not the icon inside */
+    }
+  </style>
+</head>
+<body>
+
+  <h1>To-Do List</h1>
+
+  <div class="filters" style="margin: 10px 0;">
+    <button onclick="filterTodos('all')">All</button>
+    <button onclick="filterTodos('completed')">Active</button>
+    <button onclick="filterTodos('not-completed')">Completed</button>
+  </div>
+
+  <div>
+    <input type="text" id="newTodo" placeholder="Add a new task..." />
+    <button id="addBtn"><i class="fas fa-plus" ></i></button>
+  </div>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    const API_URL = 'https://jsonplaceholder.typicode.com/todos?_limit=10';
+    const todoList = document.getElementById('todoList');
+    const addBtn = document.getElementById('addBtn');
+    const newTodoInput = document.getElementById('newTodo');
+
+    let todos = [];
+
+    window.onload = () => {
+      const stored = localStorage.getItem('todos');
+      if (stored) {
+        todos = JSON.parse(stored);
+        renderTodos(todos);
+      } else {
+        fetch(API_URL)
+          .then(res => res.json())
+          .then(data => {
+            todos = data;
+            saveTodos();
+            renderTodos(todos);
+          });
+      }
+    };
+
+    function renderTodos(todoArray) {
+      todoList.innerHTML = '';
+      todoArray.forEach(todo => {
+        const li = document.createElement('li');
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = todo.completed;
+        checkbox.onchange = () => toggleTodo(todo.id);
+
+        const span = document.createElement('span');
+        span.textContent = todo.title;
+        span.className = 'todo-text';
+        if (todo.completed) {
+          span.classList.add('completed'); // 👈 Apply strike-through if completed
+        }
+
+        const deleteBtn = document.createElement('button');
+        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteBtn.onclick = () => deleteTodo(todo.id);
+
+        li.appendChild(checkbox);
+        li.appendChild(span);
+        li.appendChild(deleteBtn);
+        todoList.appendChild(li);
+      });
+    }
+
+    addBtn.addEventListener('click', () => {
+      const title = newTodoInput.value.trim();
+      if (title) {
+        const newTodo = {
+          userId: 1,
+          id: Date.now(),
+          title,
+          completed: false
+        };
+        todos.push(newTodo);
+        saveTodos();
+        renderTodos(todos);
+        newTodoInput.value = '';
+      }
+    });
+
+    function toggleTodo(id) {
+      todos = todos.map(todo =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      );
+      saveTodos();
+      renderTodos(todos);
+    }
+
+    function deleteTodo(id) {
+      todos = todos.filter(todo => todo.id !== id);
+      saveTodos();
+      renderTodos(todos);
+
+      fetch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+        method: 'DELETE'
+      });
+    }
+
+    function filterTodos(filter) {
+      if (filter === 'completed') {
+        renderTodos(todos.filter(t => t.completed));
+      } else if (filter === 'not-completed') {
+        renderTodos(todos.filter(t => !t.completed));
+      } else {
+        renderTodos(todos);
+      }
+    }
+
+    function saveTodos() {
+      localStorage.setItem('todos', JSON.stringify(todos));
+    }
+  </script>
+
+</body>
+</html>
