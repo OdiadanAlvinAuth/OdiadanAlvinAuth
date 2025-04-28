@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoSmart Water bottle</title>
+  <style>
+    .header{
+    border: 2px solid #a89e61;
+    border-radius: 8cap;
+    background-color: rgb(245, 216, 180);
+    width: 600px;
+    height: 40px;
+    margin: 4px;
+  
+  }
+  .ALVIN{
+    width: 80px;
+    margin: 10px;
+    height: 30px;
+    background-color: rgb(134, 243, 180);
+  }
+  img 
+  {
+    width: 300px;
+    border-radius: 4cap;
+  }
+  .DIT{
+    background-color: rgb(250, 218, 178);
+    border-radius: 4cap;
+    border: 2px solid #a89e61;
+    margin: 4px;
+  }
+  
+  .BSC {
+    background-color: rgb(255, 227, 185);
+    border: 2px solid #a89e61;
+    border-radius: 4cap;
+    margin: 4px;
+  }
+  
+  .PUT{
+    background-color: bisque;
+    border-radius: 4cap;
+    border:2px solid #a89e61;
+    margin: 4px;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 10px;}
+
+    #colorModal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .modal-content {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        width: 300px;
+        margin: auto;
+      }
+      
+      .close-btn {
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+      }
+      
+
+  </style>
+</head>
+<body>
+  <center>
+  <header class="header">
+    <nav class="navbar">
+      <ul class="LUV">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section id="home" class="PUT">
+    <div class="product-info">
+      <h1>EcoSmart Water Bottle</h1>
+      <p class="DNA">Stay hydrated with the latest in smart hydration technology</p>
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/039/586/224/small_2x/ai-generated-a-collection-of-colorful-bottles-on-a-clean-table-generated-by-ai-photo.jpg" alt="EcoSmart Water Bottle">
+      <br>
+      <br>
+      <button id="buyNowBtn" class="ALVIN">Buy Now</button>
+    </div>
+
+    
+    <div id="colorModal" >
+      <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Select Your Color</h2>
+        <form id="colorForm">
+          <label>
+            <input type="radio" name="color" value="Blue" data-price="0"> Blue
+<input type="radio" name="color" value="Green" data-price="10"> Green (+R10)
+<input type="radio" name="color" value="Black" data-price="20"> Black (+R20)
+
+          </label>
+          <br>
+          <br>
+          <button type="submit" class="btn">Select</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="BSC">
+    <h2>Customize Your Bottle</h2>
+    <label>
+      <input type="checkbox" id="engraving"> Engraving (+R45)
+    </label>
+    <br>
+    <label>
+      <input type="checkbox" id="premiumPackaging"> Premium Packaging (+R60)
+    </label>
+    <br><br>
+    <p>Total Price: <span id="totalPrice">R105</span></p>
+  </section>
+  
+  
+
+  <footer id="contact" class="DIT">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Name" required>
+      <br>
+      <input type="email" id="email" placeholder="Email" required>
+      <br>
+      <textarea id="message" placeholder="Message" required></textarea>
+      <br>
+
+      <label>
+        <input type="checkbox" id="terms" required> I agree to the <a href="#">Terms and Conditions</a>.
+      </label>
+      <br>
+      <br>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </footer>
+  </center>
+
+
+
+
+  <script>
+    // JavaScript functionality
+
+// Handle "Buy Now" button
+document.getElementById('buyNowBtn').addEventListener('click', () => {
+    alert('Thank you for your interest in the EcoSmart Water Bottle!');
+});
+
+// Handle Contact Form submission
+document.getElementById('contactForm').addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent the default form submission behavior
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const message = e.target.message.value;
+    const agreeTerms = e.target.terms.checked;
+
+    if (agreeTerms) {
+        alert(`Thank you, ${name}! Your message has been received.\nWe will contact you at ${email}.`);
+        e.target.reset(); // Reset the form after submission
+    } else {
+        alert('Please agree to the terms and conditions to submit the form.');
+    }
+});
+
+let basePrice = 105;
+let colorPrice = 0;
+let engravingPrice = 0;
+let packagingPrice = 0;
+
+const totalPriceEl = document.getElementById('totalPrice');
+const colorModal = document.getElementById('colorModal');
+const closeBtn = document.querySelector('.close-btn');
+
+// Show modal on Buy Now
+
+    // Handle "Buy Now" button
+document.getElementById('buyNowBtn').addEventListener('click', () => {
+    alert('Thank you for your interest in the EcoSmart Water Bottle!');
+});
+
+// Close modal
+closeBtn.addEventListener('click', () => {
+    colorModal.style.display = 'none';
+});
+
+// Update price based on options
+function updatePrice() {
+    const total = basePrice + colorPrice + engravingPrice + packagingPrice;
+    totalPriceEl.textContent = `R${total}`;
+}
+
+// Handle color selection
+document.querySelectorAll('input[name="color"]').forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        colorPrice = parseInt(e.target.getAttribute('data-price')) || 0;
+        updatePrice();
+    });
+});
+
+// Handle extra options
+document.getElementById('engraving').addEventListener('change', (e) => {
+    engravingPrice = e.target.checked ? 45 : 0;
+    updatePrice();
+});
+
+document.getElementById('premiumPackaging').addEventListener('change', (e) => {
+    packagingPrice = e.target.checked ? 60 : 0;
+    updatePrice();
+});
+
+// Handle color form submission
+document.getElementById('colorForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    colorModal.style.display = 'none';
+    alert('Color selected! Price updated.');
+});
+
+  </script>
+</body>
+</html>
