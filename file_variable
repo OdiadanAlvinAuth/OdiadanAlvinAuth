@@ -1,0 +1,9 @@
+#file_variable 
+studentid = ("402418078")
+studentNAme = ("DAN")
+module = ("Programing")
+marks = 76
+input = open('students.txt','w')
+input.write('STUDENT-ID, STUDENTNAME, MODULE, MARKS')
+input.write('\n'+studentid+',' +studentNAme+',' +module+','+str(marks))
+input.close()
