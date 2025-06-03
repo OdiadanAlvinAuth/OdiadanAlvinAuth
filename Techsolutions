@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="Luv">
+        <h2 class="C">TechSolutions</h2>
+        <nav>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Features</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Team</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        </nav>
+    </div>
+    <section class="MBT">
+        <h1>Welcome to the Future</h1>
+        <p>Innovative solutions modern businesses. Experience the power of cutting-edge technology.</p>
+        <p class="rb">Get Started Today</p>
+    </section>
+    <center>
+    <h2>Our Features</h2>
+    <div>
+        <div class="fr">
+        <h4>Lightning fast</h4>
+        <p>Optimized performance that delivers results at the speed of light. Experience unprecedented efficiency.</p>
+        </div>
+        <div class="fr">
+            <h4>Secure & Safe</h4>
+            <p>Enterprise-grade security with advanced encryption. Your data is protected with military-level protocols.</p>
+        </div>
+
+        <div class="fr">
+            <h4>Mobile ready</h4>
+            <p>Responsive design that works perfectly on all devices. Access your solutions anywhere anytime.</p>
+        </div>
+
+        <div class="fr">
+            <h4>Smart Analytics</h4>
+            <p>AI-powered insights that drive intelligent business decisions. Transform data into actionable intelligence.</p>
+        </div>
+    </div>
+    </center>
+    <section class="pf" >
+        <center>
+        <div class="bf">
+        <h2>About Our Company</h2>
+        <p>We are pioneers in digital transformation, helping businesses navigate the complex landscape of modern technology. Our innovative solutions have empowered thousands of companiesworldwide.
+            <br><br>
+           with over a decade of experience, we combine cutting-edge technology with deep industry expertise to deliver solutions that not only meet today's challenges but anticipate tomorrow's opportunities.
+            <br><br>
+           Our commitment to excellence and customer success has made us a trusted partner for businesses of all sizes, from startups to Fortune 500 companies.
+        </p>
+        </div>
+        <div class="PF">
+            <br><br><br><br><br><br>
+            <h3>Innovation</h3>
+            <br><br><br>
+            <br><br><br><br>
+        </div>
+        </center>
+    </section>
+    <section>
+        <h2>Meet Our Team</h2>
+        <div></div>
+        <di></di>
+        <div></div>
+    </section>
+    <section>
+
+    </section>
+    
+</body>
+</html>
+
+                CSS part
+
+.Luv{
+    border: 1px solid;
+    border-radius: 1cap;
+    background-color: rgba(119, 79, 194, 0.904);
+    color: aliceblue;
+}
+.C{
+    margin-left: 50px;
+}
+ul,li{
+    text-align: center;
+    display: inline-block;
+}
+a {
+    color: aliceblue;
+}
+.MBT{
+    border: 1px solid;
+    border-radius: 1cap;
+    background-color: rgba(119, 79, 194, 0.904);
+    text-align: center;
+    color: aliceblue;
+    
+}
+.rb{
+    border-radius: 4cap;
+    border: 1px solid;
+    width: 150px;
+    margin-left: 400px;
+    background-color: aliceblue;
+    color: rgba(119, 79, 194, 0.904);
+}
+nav{
+    text-align: right;
+    margin-right: 90px;
+}
+.fr{
+    border: 1px solid white;
+    border-radius: 2cap;
+    background-color: rgba(240, 240, 240, 0.74);
+    width: 200px;
+    margin: 4px;
+    display: inline-block;
+}
+.pf{
+    border: 1px solid white;
+    background-color: rgba(240, 240, 240, 0.74);
+}
+.bf{
+    width: 400px;
+    margin-left: 90px;
+    border: 1px solid whitesmoke;
+    background-color:rgba(240, 240, 240, 0.74);
+}
+.PF{
+    border: 1px solid ;
+    border-radius: 1cap;
+    background-color: rgba(119, 79, 194, 0.904);
+    color: aliceblue;
+    width: 400px;
+    text-align: center;
+    margin-left: 10px;
+}
+.bf,.PF{
+    display: inline-block;
+
+}
+
+
