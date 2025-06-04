@@ -68,12 +68,57 @@
     </section>
     <section>
         <h2>Meet Our Team</h2>
-        <div></div>
-        <di></di>
-        <div></div>
-    </section>
-    <section>
+        <div class="Alex">
+            <div class="AS">
+                <h2>AS</h2>
+            </div>
+            <h4>Alex Smith</h4>
+            <p>Chief Technology Officer</p>
+        </div>
 
+        <div class="Maria">
+            <div class="MJ">
+                <h2>MJ</h2>
+            </div>
+            <h4>Maria Johnson</h4>
+            <p>Lead Designer</p>
+        </div>
+
+        <div class="Robert">
+            <div>
+                <h2 class="RD">RD</h2>
+            </div>
+            <br>
+            <h4>Robert Devis</h4>
+            <p>Senior Develloper</p>
+        </div>
+
+    </section>
+   
+    <section>
+        <h2>Get In Touch</h2>
+        <form action="">
+            <label for="name">Full Name</label>
+            <br>
+            <input type="text" id="name" placeholder="Enter your full name" name="name" required>
+            <br><br>
+
+            <label for="email">Email</label>
+            <br>
+            <input type="email" id="email" placeholder="Enter your Email" name="email" required>
+            <br><br>
+
+            <label for="Phone-number">Phone Number</label>
+            <br>
+            <input type="number" id="number" placeholder="Enter your phone number" name="Phone Number" required>
+            <br><br>
+            <label for="message">Message</label>
+            <br>
+            <textarea id="message" name="message" rows="4" cols="30" required>Tell us about your project</textarea>
+            <br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
     </section>
     
 </body>
