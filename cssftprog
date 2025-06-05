@@ -1,0 +1,144 @@
+.Web{
+    background-color: rgb(141, 141, 216);
+}
+.INS{
+    background-color: rgb(221, 221, 182);
+}
+.Prog{
+    background-color: rgb(121, 114, 128);
+}
+.Net{
+    background-color: rgb(230, 162, 162);
+}
+.Math{
+    background-color: rgb(243, 236, 236);
+}
+body{text-align: center;
+    
+}
+table{width: 100%;}
+nav ul{list-style-type:none ;
+    display:flex; }
+    Nav {background-color: rgb(109, 104, 104);
+    color: white;
+       padding: 15px 0; 
+    }
+nav ul li a{text-decoration: none;
+color: antiquewhite;
+font-size: 18px;
+
+}
+import os
+import json
+
+# Global list to store student records
+students = []
+
+# File to store student data
+data_file = 'students.json'
+
+
+def display_menu():
+    """Display the main menu options."""
+    print("\nStudent Management System")
+    print("1. Add Student")
+    print("2. Display All Students")
+    print("3. Search Student")
+    print("4. Calculate Grade Statistics")
+    print("5. Save Data")
+    print("6. Load Data")
+    print("7. Exit")
+
+
+def add_student():
+    """Add a new student record."""
+    name = input("Enter student's name: ")
+    roll_no = input("Enter student's roll number: ")
+    marks = []
+    for i in range(1, 6):
+        mark = float(input(f"Enter mark for subject {i}: "))
+        marks.append(mark)
+    students.append({'name': name, 'roll_no': roll_no, 'marks': marks})
+    print(f"Student {name} added successfully.")
+
+
+def display_all_students():
+    """Show all student records."""
+    if not students:
+        print("No student records found.")
+        return
+    print("\nAll Students:")
+    for student in students:
+        print(f"Name: {student['name']}, Roll No: {student['roll_no']}, Marks: {student['marks']}")
+
+
+def search_student():
+    """Search for a specific student."""
+    roll_no = input("Enter roll number to search: ")
+    for student in students:
+        if student['roll_no'] == roll_no:
+            print(f"Student found: Name: {student['name']}, Marks: {student['marks']}")
+            return
+    print("Student not found.")
+
+
+def calculate_statistics():
+    """Calculate and display grade statistics."""
+    if not students:
+        print("No student records to calculate statistics.")
+        return
+    all_marks = [mark for student in students for mark in student['marks']]
+    average = sum(all_marks) / len(all_marks)
+    highest = max(all_marks)
+    lowest = min(all_marks)
+    print(f"Average Marks: {average:.2f}")
+    print(f"Highest Marks: {highest}")
+    print(f"Lowest Marks: {lowest}")
+
+
+def save_data():
+    """Save data to file."""
+    with open(data_file, 'w') as f:
+        json.dump(students, f)
+    print("Data saved successfully.")
+
+
+def load_data():
+    """Load data from file."""
+    if os.path.exists(data_file):
+        with open(data_file, 'r') as f:
+            global students
+            students = json.load(f)
+        print("Data loaded successfully.")
+    else:
+        print("No data file found.")
+
+
+def main():
+    """Main program loop."""
+    while True:
+        display_menu()
+        choice = input("Enter your choice: ")
+        if choice == '1':
+            add_student()
+        elif choice == '2':
+            display_all_students()
+        elif choice == '3':
+            search_student()
+        elif choice == '4':
+            calculate_statistics()
+        elif choice == '5':
+            save_data()
+        elif choice == '6':
+            load_data()
+        elif choice == '7':
+            print("Exiting program.")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+
+if __name__ == "__main__":
+    main()
+
+
