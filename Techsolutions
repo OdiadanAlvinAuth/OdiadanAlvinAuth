@@ -194,4 +194,31 @@ nav{
 
 }
 
+                            JAVASCRIPTPART
+
+function validateForm() {
+             let myname = document.getElementById("name").value;
+             let myemail = document.getElementById("email").value;
+             let mynumber = document.getElementById("number").value;
+             let mymessage = document.getElementById("message").value;
+
+             // repaet for all input
+             if (name=="" || myemail=="")
+                {alert("Please fill in this fields");    }
+            else if(!myemail.includes("@"))
+            {alert("Enter a valid email");   }
+            else {
+                alert("Your form has been submitted successfuly")
+            }
+
+
+        }
+
+       $("#change").click(function(){
+            $("#myp").css("color", "blue");
+            $("#myp").text("Exam Prep");
+
+
+       });
+
 
