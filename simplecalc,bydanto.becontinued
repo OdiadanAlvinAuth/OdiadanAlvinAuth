@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple jQuery Calculator</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body { border: 3px solid rgb(54, 50, 50); font-family: Arial; 
+        text-align: center; margin-top: 50px; 
+        border-radius: 3cap;
+        width: 300px;
+        height: 500px;
+    }
+    input { width: 200px; margin: 5px; padding: 8px; 
+        background-color: rgb(128, 128, 196);
+        color: white;
+    }
+    button { margin: 5px; padding: 10px 20px; background-color: rgb(51, 48, 48); color: white; }
+    #result { font-size: 20px; margin-top: 20px; font-weight: bold; }
+
+  </style>
+</head>
+<body>
+
+  <h2>Simple Calculator</h2>
+  <input type="number" id="num1" placeholder="Calculation">
+  
+  <br>
+  <button id="nmb" class="">9</button>
+  <button id="nmb" class>8</button>
+  <button id="nmb" class="">7</button>
+  <button id="nmb" class="">6</button>
+  <button id="nmb" class="">5</button>
+  <button id="nmb" class="">4</button>
+  <button id="nmb" class="">3</button>
+  <button id="nmb" class="">2</button>
+  <button id="nmb" class="">1</button>
+  <button id="nmb" class="">0</button>
+  <button id="add">+</button>
+  <button id="subtract">−</button>
+  <button id="multiply">×</button>
+  <button id="divide">÷</button>
+  <button id="result">=</button>
+
+  <script>
+    let nmb= document.getElementById("nmb").val;
+    function getValues() {
+      const nmb = parseFloat($("#nmb").val());
+      return [];
+    }
+    $("#nmb").click(function(){
+        const [nmb] =getValues();
+
+    });
+
+    $("#add").click(function() {
+      const [a, b] = getValues();
+      $("#result").text("Result: " + (a + b));
+    });
+
+    $("#subtract").click(function() {
+      const [a, b] = getValues();
+      $("#result").text("Result: " + (a - b));
+    });
+
+    $("#multiply").click(function() {
+      const [a, b] = getValues();
+      $("#result").text("Result: " + (a * b));
+    });
+
+    $("#divide").click(function() {
+      const [a, b] = getValues();
+      if (b === 0) {
+        $("#result").text("Error: Cannot divide by zero");
+      } else {
+        $("#result").text("Result: " + (a / b));
+      }
+    });
+  </script>
+
+</body>
+</html>
