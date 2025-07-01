@@ -1,0 +1,186 @@
+n = int(input("How many integers do you wish to enter? "))
+
+even_sum = 0
+odd_sum = 0
+
+print(f"Please enter {n} integers:")
+for i in range(n):
+    number = int(input(f"Enter integer {i+1}: "))
+    
+    if number % 2 == 0:
+        even_sum += number
+    else:
+        odd_sum += number
+print(f"\nSum of even integers: {even_sum}")
+print(f"Sum of odd integers: {odd_sum}")
+2
+def is_perfect_number(n):
+    if n <= 1:
+        return False
+    
+    divisors_sum = 0
+    for i in range(1, n):
+        if n % i == 0:
+            divisors_sum += i
+    return divisors_sum == n
+
+def find_divisors(n):
+    divisors = []
+    for i in range(1, n):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+
+def test_perfect_numbers():
+    test_numbers = [6, 28, 496, 8128, 12, 100]
+    
+    print("Testing Perfect Numbers:")
+    print("-" * 40)
+    
+    for num in test_numbers:
+        is_perfect = is_perfect_number(num)
+        divisors = find_divisors(num)
+        divisors_sum = sum(divisors)
+        
+        print(f"Number: {num}")
+        print(f"Proper divisors: {divisors}")
+        print(f"Sum of divisors: {divisors_sum}")
+        print(f"Is Perfect: {is_perfect}")
+        print("-" * 40)
+if __name__ == "__main__":
+    test_perfect_numbers()
+    print("\nEnter a number to check if it's perfect:")
+    try:
+        user_number = int(input("Enter a positive integer: "))
+        
+        if user_number <= 0:
+            print("Please enter a positive integer.")
+        else:
+            divisors = find_divisors(user_number)
+            is_perfect = is_perfect_number(user_number)
+            
+            print(f"\nNumber: {user_number}")
+            print(f"Proper positive divisors: {divisors}")
+            print(f"Sum of proper divisors: {sum(divisors)}")
+            
+            if is_perfect:
+                print(f"{user_number} is a perfect number!")
+            else:
+                print(f"{user_number} is not a perfect number.")
+                
+    except ValueError:
+        print("Invalid input. Please enter a valid integer.")
+
+3
+def calculateWeightedScore(assignment_score, midterm_score, final_exam_score):
+    weighted_score = (assignment_score * 0.3) + (midterm_score * 0.3) + (final_exam_score * 0.4)
+    return weighted_score
+
+def calculateGrade(weighted_score):
+    if weighted_score >= 90:
+        return 'A', 4.0
+    elif weighted_score >= 80:
+        return 'B', 3.0
+    elif weighted_score >= 70:
+        return 'C', 2.0
+    elif weighted_score >= 60:
+        return 'D', 1.0
+    else:
+        return 'F', 0.0
+
+def displayStudentRecord(student_id, name, assignment_score, midterm_score, final_exam_score, weighted_score, grade_letter, gpa):
+    print("\n" + "="*50)
+    print("STUDENT GRADE RECORD")
+    print("="*50)
+    print(f"Student ID: {student_id}")
+    print(f"Name: {name}")
+    print(f"Assignment Score: {assignment_score}")
+    print(f"Midterm Score: {midterm_score}")
+    print(f"Final Exam Score: {final_exam_score}")
+    print(f"Weighted Score: {weighted_score:.2f}")
+    print(f"Grade Letter: {grade_letter}")
+    print(f"GPA: {gpa}")
+    print("="*50)
+
+def main():
+    print("Welcome to Student Grade Management System")
+    print("-" * 45)
+    
+    try:
+       
+        student_id = input("Enter Student ID: ")
+        name = input("Enter Student Name: ")
+        assignment_score = float(input("Enter Assignment Score (0-100): "))
+        midterm_score = float(input("Enter Midterm Score (0-100): "))
+        final_exam_score = float(input("Enter Final Exam Score (0-100): "))
+        
+      
+        if not all(0 <= score <= 100 for score in [assignment_score, midterm_score, final_exam_score]):
+            print("Error: All scores must be between 0 and 100")
+            return
+        weighted_score = calculateWeightedScore(assignment_score, midterm_score, final_exam_score)
+        grade_letter, gpa = calculateGrade(weighted_score)
+        displayStudentRecord(student_id, name, assignment_score, midterm_score, 
+                           final_exam_score, weighted_score, grade_letter, gpa)
+        
+    except ValueError:
+        print("Error: Please enter valid numeric values for scores")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
+if __name__ == "__main__":
+    main()
+4
+def read_student_data():
+    try:
+       
+        with open('students.txt', 'r') as file:
+            print("Reading student data from students.txt...")
+            print("-" * 50)
+            
+            for line_number, line in enumerate(file, 1):
+                try:
+                   
+                    line = line.strip()
+                    if not line:
+                        continue
+                    
+                   
+                    parts = line.split(',')
+                    
+                    if len(parts) != 2:
+                        print(f"Line {line_number}: Invalid format - '{line}' (Expected: Name,Mark)")
+                        continue
+                    name = parts[0].strip()
+                    mark_str = parts[1].strip()
+                    mark = int(mark_str)
+                    if mark >= 50:
+                        result = "PASSED"
+                    else:
+                        result = "FAILED"
+                    print(f"Student: {name:<20} Mark: {mark:>3} - {result}")
+                    
+                except ValueError:
+                    print(f"Line {line_number}: Error converting mark to integer - '{line}'")
+                    print(f"  -> Invalid mark value: '{mark_str}'")
+                except Exception as e:
+                    print(f"Line {line_number}: Unexpected error processing line - {e}")
+            
+            print("-" * 50)
+            print("Processing completed successfully!")
+            
+    except FileNotFoundError:
+        print("Error: The file 'students.txt' was not found.")
+        print("Please ensure the file exists in the same directory as this script.")
+    except PermissionError:
+        print("Error: Permission denied. Cannot read the file 'students.txt'.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+def main():
+    print("Student Grade Processing System")
+    print("=" * 50)
+    read_student_data()
+
+if __name__ == "__main__":
+    main()
